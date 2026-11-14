@@ -1,0 +1,57 @@
+#api call fro creating admin
+###
+POST http://127.0.0.1:8000/owner/register/
+Content-Type: application/json
+
+{
+    "username":"admin2",
+    "email":"admin2@gmail.com",
+    "password":"admin2@123"
+}
+
+
+
+
+#api call to list
+###
+Get http://127.0.0.1:8000/foodinfo/Foodlog/
+Accept: application/json
+Authorization: Basic admin2:admin2@123
+
+#api call to create
+###
+Post http://127.0.0.1:8000/foodinfo/Foodlog/
+Content-Type: application/json
+
+{
+
+    "title": "Dosa",
+    "calorie": 120,
+    "meal_type": "breakfast",
+    "serving_size": "2 Nos",
+    "owner": "Anliya"
+}
+
+#api call to retrieve 
+###
+Get http://127.0.0.1:8000/foodinfo/Foodlog/3/
+Accept: application/json
+
+#api call to update
+###
+PUT http://127.0.0.1:8000/foodinfo/Foodlog/1/
+Content-Type: application/json
+
+{
+    
+    "title": "Idli",
+    "calorie": 140,
+    "meal_type": "breakfast",
+    "serving_size": "3 Nos",
+    "owner": "Anna"
+}
+
+#api call to delete
+###
+DELETE  http://127.0.0.1:8000/foodinfo/Foodlog/2/
+Accept: application/json
